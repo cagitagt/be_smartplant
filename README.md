@@ -78,6 +78,14 @@ php artisan serve
 2. **Access the Application**:
    Open your browser and navigate to `http://localhost:8000/api`.
 
+3. **Run the Scheduler**:
+
+```bash
+php artisan schedule:work
+```
+
+This command ensures that scheduled tasks defined in your application are executed as expected.
+
 ## API Documentation
 
 You can view the API documentation and reference at the following link:
