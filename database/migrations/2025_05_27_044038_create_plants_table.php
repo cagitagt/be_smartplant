@@ -26,6 +26,10 @@ return new class extends Migration
             $table->integer('optimal_temperature_min')->nullable();
             $table->integer('optimal_temperature_max')->nullable();
             $table->timestamps();
+
+            $table->index(['user_id', 'status']);
+            $table->index('planted_date');
+            $table->index('type');
         });
     }
 

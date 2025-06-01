@@ -11,7 +11,9 @@ class Notification extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'plant_id',
+        'device_id',
         'type',
         'title',
         'message',
@@ -27,8 +29,18 @@ class Notification extends Model
         'data' => 'array',
     ];
 
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function plant(): BelongsTo
     {
         return $this->belongsTo(Plant::class);
+    }
+
+    public function device(): BelongsTo
+    {
+        return $this->belongsTo(Device::class);
     }
 }
