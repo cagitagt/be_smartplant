@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PlantSeeder::class,
             DeviceSeeder::class,
-            SensorDataSeeder::class,
+            // SensorDataSeeder::class,
             IrrigationScheduleSeeder::class,
             WateringHistorySeeder::class,
             NotificationSeeder::class,
